@@ -1,0 +1,82 @@
+		//  
+		// The following method loads DDS registers with values
+		//	to create a frequency sweep
+		//
+
+		public void LoadFreqSweep(int channel) {
+			double newStartFreqMHz, newEndFreqMHz, newDeltaFreqMHz, newTimeDeltaUsec;
+			EnableFreqSweepMode(channel, true);
+			SetFreq0(_startFreqMHz[channel], out newStartFreqMHz, channel);
+			SetFreq1(_endFreqMHz[channel], out newEndFreqMHz, channel);
+			SetFreqSweepFreqDelta(_deltaFreqMHz[channel], out newDeltaFreqMHz, channel);
+			SetFreqSweepTimeDelta(_deltaTimeUsec[channel], out newTimeDeltaUsec, channel);
+			LoadAllDDSRegisters();
+		}
+
+
+		////////////////////////////////////////////////////////////////////
+		//
+		// These first 3 methods set a frequency register
+		//	with a value returned by GetFreqBinaryString0( )
+		//
+
+		public void SetFreq0(double freqMHz, out double newFreq, int channel) {
+			string sRegVal = GetFreqBinaryString(freqMHz, out newFreq);
+			SetRegMapValue(evb9959_RegMaps.rm9959_NewRegMapVals, 4, sRegVal, GetChMaskVal(channel));
+			_startFreqMHz[channel] = newFreq;
+		}
+
+		public void SetFreq1(double freqMHz, out double newFreq, int channel) {
+			string sRegVal = GetFreqBinaryString(freqMHz, out newFreq);
+			SetRegMapValue(evb9959_RegMaps.rm9959_NewRegMapVals, 0x0A, sRegVal, GetChMaskVal(channel));
+			_endFreqMHz[channel] = newFreq;
+		}
+
+		public void SetFreqSweepFreqDelta(double freqMHz, out double newFreq, int channel) {
+			string sRegVal = GetFreqBinaryString(freqMHz, out newFreq);
+			SetRegMapValue(evb9959_RegMaps.rm9959_NewRegMapVals, 0x08, sRegVal, GetChMaskVal(channel));
+			_deltaFreqMHz[channel] = newFreq;
+		}
+
+
+		public static string GetFreqBinaryString0(double freqMHz, double clockMHz, out double newFreqMHz) {
+			string freqString;
+			int freqInt;
+			double freqValue;
+			double scaleFactor = Math.Pow(2.0, 32.0);
+			freqValue = freqMHz * scaleFactor / clockMHz;
+			freqInt = (int)(freqValue + 0.5);
+			newFreqMHz = (double)freqInt * clockMHz / scaleFactor;
+			freqString = Int2BinString0((int)(freqValue + 0.5), 32);
+			return freqString;
+		}
+
+		////////////////////////////////////////////////////////////////////////
+		//
+		// This next method sets a time interval register 
+		//	with a value returned by GetTimeBinaryString0( )
+		//
+
+		public void SetFreqSweepTimeDelta(double timeUsec, out double newTimeUsec, int channel) {
+			string sRegVal = GetTimeBinaryString0(timeUsec, SysClockMHz, out newTimeUsec, channel);
+			SetRegMapValue(evb9959_RegMaps.rm9959_NewRegMapVals, 0x07, sRegVal, GetChMaskVal(channel));
+			_deltaTimeUsec[channel] = newTimeUsec;
+		}
+
+		public static string GetTimeBinaryString0(double timeUsec, double sysClockMHz, out double newTimeUsec, int channel) {
+			double timeVal = timeUsec * sysClockMHz / 4.0;
+			int timeInt = (int)(timeVal + 0.5);
+			if (timeInt > 255) {
+				throw new ApplicationException("Ramp time delta > 255 clocks");
+			}
+			newTimeUsec = timeInt / (sysClockMHz / 4.0);
+			if (Tools.RoundToSignificantDigits(timeVal, 5) != (double)timeInt) {
+				throw new ApplicationException("Freq Sweep Time Delta NOT multiple of Sync Clock period.");
+			}
+			string timeString = Int2BinString0(timeInt, 8);
+			string sRegVal = "00000000" + timeString; // no fall time set
+			return sRegVal;
+		}
+
+
+		///////////////////////////////////////////////////////////////////////
