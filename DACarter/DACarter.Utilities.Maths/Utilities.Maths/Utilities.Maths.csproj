@@ -92,10 +92,10 @@
       <HintPath>..\..\Utilities.Graphics\bin\Debug\DACarter.Utilities.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="ippdefs_cs">
-      <HintPath>..\..\..\POPN3\IppDlls\Ippdefs\bin\Debug\ippdefs_cs.dll</HintPath>
+      <HintPath>..\..\..\POPN4\IppDlls\Ippdefs\bin\Debug\ippdefs_cs.dll</HintPath>
     </Reference>
     <Reference Include="ipps_cs">
-      <HintPath>..\..\..\POPN3\IppDlls\ipps\bin\Debug\ipps_cs.dll</HintPath>
+      <HintPath>..\..\..\POPN4\IppDlls\ipps\bin\Debug\ipps_cs.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Iridium, Version=2008.8.16.470, Culture=neutral, PublicKeyToken=c061a3ec32cc0c6f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

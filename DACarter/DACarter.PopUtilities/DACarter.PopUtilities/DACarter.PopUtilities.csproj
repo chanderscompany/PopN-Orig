@@ -92,7 +92,7 @@
       <HintPath>..\..\Utilities\bin\Debug\DACarter.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="ippdefs_cs">
-      <HintPath>..\..\..\POPN3\IppDlls\Ippdefs\bin\Debug\ippdefs_cs.dll</HintPath>
+      <HintPath>..\..\..\POPN4\IppDlls\Ippdefs\bin\Debug\ippdefs_cs.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
