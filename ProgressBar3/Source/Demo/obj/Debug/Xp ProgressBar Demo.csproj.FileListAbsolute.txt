@@ -1,0 +1,2 @@
+C:\Users\Dave\Documents\Visual Studio 2010\Projects\ProgressBar3\Release\XP Progress Bar Samples.exe.config
+C:\Users\Dave\Documents\Visual Studio 2013\Projects\ProgressBar3\Release\XP Progress Bar Samples.exe.config
