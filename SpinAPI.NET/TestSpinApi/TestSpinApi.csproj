@@ -87,7 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SpinAPI.NET\SpinAPI.NET.csproj">
+    <ProjectReference Include="..\SpinAPI.NET.csproj">
       <Project>{4C72C3DD-7D04-4572-BD64-5E82AF9DD974}</Project>
       <Name>SpinAPI.NET</Name>
     </ProjectReference>
