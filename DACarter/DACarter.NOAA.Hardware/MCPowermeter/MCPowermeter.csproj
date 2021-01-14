@@ -56,7 +56,7 @@
     </Reference>
     <Reference Include="mcl_pm64, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\mcl_pm64.dll</HintPath>
+      <HintPath>..\..\..\Libs\mcl_pm64.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />

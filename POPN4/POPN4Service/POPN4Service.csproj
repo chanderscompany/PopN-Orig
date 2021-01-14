@@ -88,10 +88,13 @@
       <HintPath>..\IppDlls\ipps\bin\Debug\ipps_cs.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Iridium">
-      <HintPath>..\..\DACarter\DACarter.Utilities.Maths\Utilities.Maths\bin\Debug\MathNet.Iridium.dll</HintPath>
+      <HintPath>..\..\Libs\MathNet.Iridium.dll</HintPath>
     </Reference>
     <Reference Include="MCPowermeter">
       <HintPath>..\..\DACarter\DACarter.NOAA.Hardware\MCPowermeter\bin\Debug\MCPowermeter.dll</HintPath>
+    </Reference>
+    <Reference Include="POPCommServer">
+      <HintPath>..\POPCommServer\bin\Debug\POPCommServer.dll</HintPath>
     </Reference>
     <Reference Include="PulseGenDevice">
       <HintPath>..\..\DACarter\DACarter.NOAA.Hardware\PulseGenDevice\bin\Debug\PulseGenDevice.dll</HintPath>
@@ -133,12 +136,6 @@
     <Compile Include="PopSequencer.cs" />
     <Compile Include="ServiceStarter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\POPCommServer\POPCommunication.csproj">
-      <Project>{68124B13-C2DB-4574-A9F2-BD2672E4D4AA}</Project>
-      <Name>POPCommunication</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

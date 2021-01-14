@@ -69,12 +69,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PulseGeneratorFactory.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PulseboxCard\PulseboxCard.csproj">
-      <Project>{76405A69-A01F-4F60-8653-3DA5F0B9505F}</Project>
-      <Name>PulseboxCard</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

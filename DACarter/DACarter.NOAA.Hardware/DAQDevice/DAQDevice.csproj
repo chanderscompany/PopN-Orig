@@ -58,9 +58,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Utilities\bin\Debug\DACarter.Utilities.dll</HintPath>
     </Reference>
+    <Reference Include="Interop.DAQCOMLib">
+      <HintPath>..\..\..\Libs\Interop.DAQCOMLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MccDaq, Version=2.5.0.0, Culture=neutral, PublicKeyToken=a37eefcf5c6ca10a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Measurement Computing\DAQ\MccDaq.dll</HintPath>
+      <HintPath>..\..\..\Libs\MccDaq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,17 +81,6 @@
     <Compile Include="DAQBoardMCCFile.cs" />
     <Compile Include="DAQDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="DAQCOMLib">
-      <Guid>{ABD18F2E-4C21-4433-B230-349C835B6BAC}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>401</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -75,6 +75,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\IppDlls\Ippdefs\bin\Debug\ippdefs_cs.dll</HintPath>
     </Reference>
+    <Reference Include="POPCommServer">
+      <HintPath>..\POPCommServer\bin\Debug\POPCommServer.dll</HintPath>
+    </Reference>
+    <Reference Include="POPN4Service">
+      <HintPath>..\POPN4Service\bin\Debug\POPN4Service.exe</HintPath>
+    </Reference>
     <Reference Include="PulseGenDevice, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DACarter\DACarter.NOAA.Hardware\PulseGenDevice\bin\Debug\PulseGenDevice.dll</HintPath>
@@ -161,16 +167,6 @@
     <Compile Include="SaveChangesBox.designer.cs">
       <DependentUpon>SaveChangesBox.cs</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\POPCommServer\POPCommunication.csproj">
-      <Project>{68124B13-C2DB-4574-A9F2-BD2672E4D4AA}</Project>
-      <Name>POPCommunication</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\POPN4Service\POPN4Service.csproj">
-      <Project>{42BD505D-FA91-45CC-B860-BA2BB7BCFD69}</Project>
-      <Name>POPN4Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="POPN4.ico" />

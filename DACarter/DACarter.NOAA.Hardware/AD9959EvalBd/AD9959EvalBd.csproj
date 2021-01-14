@@ -79,7 +79,7 @@
     </Reference>
     <Reference Include="LibUsbDotNet, Version=2.2.5.61, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\LibUsbDotNet.dll</HintPath>
+      <HintPath>..\..\..\Libs\LibUsbDotNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

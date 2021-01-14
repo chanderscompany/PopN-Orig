@@ -94,16 +94,16 @@
     </Reference>
     <Reference Include="Interop.DAQCOMLib - 32bit, Version=2.401.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Interop.DAQCOMLib - 32bit.dll</HintPath>
+      <HintPath>..\DAQDevice\Interop.DAQCOMLib - 32bit.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="LibUsbDotNet, Version=2.2.8.104, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\LibUsbDotNet.dll</HintPath>
+      <HintPath>..\..\..\Libs\LibUsbDotNet.dll</HintPath>
     </Reference>
     <Reference Include="mcl_pm64, Version=14.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\mcl_pm64.dll</HintPath>
+      <HintPath>..\..\..\Libs\mcl_pm64.dll</HintPath>
     </Reference>
     <Reference Include="SpinAPI.NET">
       <HintPath>..\..\..\SpinAPI.NET\bin\AnyCPU\Debug\SpinAPI.NET.dll</HintPath>
